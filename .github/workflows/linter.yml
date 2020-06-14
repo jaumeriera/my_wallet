@@ -17,5 +17,5 @@ jobs:
     - uses: actions/checkout@v2
 
     - name: Execute flake8 linter
-    - run: |
-        docker-compose run --rm web flake8
+      run: |
+        docker-compose run --build --rm web flake8
