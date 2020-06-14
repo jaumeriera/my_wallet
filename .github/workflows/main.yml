@@ -14,3 +14,8 @@ jobs:
     - name: docker build
       run: |
         docker build . -t django-mywallet
+    
+    - name: python linter
+      run: |
+        docker-compose run --rm web flake8
+      
