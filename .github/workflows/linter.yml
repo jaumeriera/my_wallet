@@ -16,6 +16,10 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Build docker image
+        run: |
+          docker-compose build
+
     - name: Execute flake8 linter
       run: |
         docker-compose run --rm web flake8
